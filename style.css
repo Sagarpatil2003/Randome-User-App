@@ -1,0 +1,298 @@
+/* Import the Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Define custom CSS variables */
+:root {
+  --sky-blue: #0fcdef;
+  --dark-blue: #162b4e;
+  --grey: #babcc2;
+  --light-blue: #f8f9ff;
+}
+
+/* Set the base font size for the HTML element */
+html {
+  font-size: 10px;
+}
+
+/* Apply styles to the body element */
+body {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--light-blue);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Container for content */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+/* Styles for the search input section */
+.search {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+#search-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f8f9ff;
+  color: var(--dark-blue);
+}
+
+#search-input::placeholder {
+  color: var(--grey);
+}
+
+#search-input:focus {
+  outline: none;
+  border: 2px solid var(--sky-blue);
+}
+
+#search-input:hover {
+  border: 1px solid var(--sky-blue);
+}
+
+/* Styles for the user list */
+#user-list li {
+  display: none;
+  cursor: pointer;
+  color: #282b3b;
+  padding: 5px;
+  margin: 2px;
+  border-radius: 5px;
+
+}
+#user-list li:hover {
+    border: 1px solid #0fcdef;
+    background-color: #162b4e;
+    color: var(--light-blue);
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+#user-list {
+  margin-bottom: 16rem;
+}
+
+/* Styles for the user list input field */
+#user-list input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styles for the user card */
+.card {
+  text-align: center;
+  background-color: #fff;
+  max-width: 500px;
+  margin: auto;
+  padding-bottom: 2rem;
+  width: 100%;
+  box-shadow: 0 2px 12px 3px rgba(53, 53, 53, 0.1);
+  border-radius: 5px;
+}
+
+/* Styles for the card header */
+.card-head {
+  position: relative;
+  height: 130px;
+}
+
+.card-head a {
+  position: absolute;
+  left: 14rem;
+  top: 8rem;
+  text-decoration: none;
+  background-color: var(--sky-blue);
+  color: #fff;
+  border-radius: 3px;
+  font-weight: 500;
+  padding: 0.3rem 0.8rem;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+  transition: box-shadow 300ms ease-in-out;
+}
+
+.card-head a:hover {
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Styles for the user image */
+.user-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.user-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Styles for the user's post address */
+.user-post-address {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-post-address > div {
+  display: block;
+}
+
+.user-post-address > div span:first-child {
+  font-weight: 700;
+  font-size: 1.9rem;
+  color: var(--dark-blue);
+  opacity: 0.2;
+}
+
+.user-post-address > div span:last-child {
+  font-weight: 500;
+  color: var(--grey);
+  margin-top: 0.7rem;
+}
+
+/* Styles for the card body */
+.card-body {
+  padding: 0 3rem 3.8rem 3rem;
+}
+
+/* Styles for the user's name */
+.user-name {
+  padding: 3rem 0 1.6rem 0;
+  font-size: 1.9rem;
+  color: var(--dark-blue);
+}
+
+.user-name-title {
+  font-weight: 700;
+}
+
+.user-name-full {
+  font-weight: 600;
+}
+
+.user-age {
+  color: var(--grey);
+}
+
+/* Styles for the user's location address */
+.user-location-address span {
+  color: var(--dark-blue);
+  font-size: 1.8rem;
+  opacity: 0.9;
+  letter-spacing: 1px;
+}
+
+/* Styles for the card footer */
+.card-foot {
+  padding-top: 2.4rem;
+  margin: 2.4rem 3rem;
+  border-top: 1px solid var(--sky-blue);
+}
+
+/* Styles for the user contact info */
+.user-contact-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.8;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.user-contact-info span i {
+  color: var(--sky-blue);
+}
+
+.user-contact-info span {
+  color: var(--dark-blue);
+}
+
+/* Styles for the "Get New User" button */
+#generate-btn {
+  background-color: var(--dark-blue);
+  color: #fff;
+  font-family: inherit;
+  font-size: 2rem;
+  border: none;
+  padding: 0.8rem 1.2rem;
+  margin-bottom: 3rem;
+  border-radius: 4px;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+#generate-btn:hover {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 490px) {
+  .container {
+    margin: 4rem auto;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: #162b4e
+  }
+  #search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f8f9ff;
+    color: var(--dark-blue);
+  }
+  #user-list li{
+    color: var(--light-blue);
+  }
+  #user-list li:hover {
+    background-color: #f2f4f8;
+    color: var(--dark-blue);
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  }
+
+  .card-head a {
+    position: inherit;
+    left: 0;
+    top: 10rem;
+  }
+
+  .user-post-address {
+    flex-direction: column;
+  }
+
+  .user-post-address > div {
+    margin-bottom: 1.4rem;
+  }
+
+  
+}
